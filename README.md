@@ -14,19 +14,48 @@
 
 `pip install -r requirements.txt` 
 
-### 2. Train and Validate
+### 2. Reproduce Results
+To run an experiment you will need to call:
 
 ```python
-python trainval.py -e tcvae -sb ../results -d $DATA -r 1
+python trainval.py -e tcvae -sb ./logs -d ./data -r 1
 ```
 
-Argument Descriptions:
+Where the argument descriptions are:
+
 ```
 -e  [Experiment group to run like 'vae' (the rest of the experiment groups are in exp_configs/main_exps.py)] 
 -sb [Directory where the experiments are saved]
 -r  [Flag for whether to reset the experiments]
 -d  [Directory where the datasets are aved]
 ```
+
+To reproduce the results you will need to run:
+
+```python
+python trainval.py -e tcvae -sb ./logs/tcvae -d ./data -r 1
+python trainval.py -e vae -sb ./logs/vae -d ./data -r 1
+python trainval.py -e oracle -sb ./logs/oracle -d ./data -r 1
+python trainval.py -e unbiased_classifier -sb ./logs/classifier -d ./data -r 1
+```
+
+This will train all the generators and classifiers needed to reproduce the experiments. Then, assuming you only ran one hyperparameter combination per model (so there is only one folder inside `./logs/tcvae/`, etc, run:
+
+```bash
+mv ./logs/tcvae/* ./data/pretrained_models/tcvae
+mv ./logs/vae/* ./data/pretrained_models/xgem+
+mv ./logs/oracle/* ./data/pretrained_models/oracle
+mv ./logs/unbiased_classifier/* ./data/pretrained_models/unbiased_classifier
+```
+
+Finally, run the BTE experiment:
+
+```python
+python trainval.py -e cache_fim -sb ./logs/bte -d ./data -r 1
+python trainval.py -e gradient_attacks -sb ./logs/bte -d ./data -r 1
+```
+
+You can plot the results by running the Jupyter notebook in `notebooks/Gather Results.ipynb`
 
 ### 3. Visualize the Results
 
@@ -36,6 +65,8 @@ Follow these steps to visualize plots. Open `results.ipynb`, run the first cell 
 <img width="100%" src="https://raw.githubusercontent.com/haven-ai/haven-ai/master/docs/vis.gif">
 </p>
 
+### 4. Beyond Trivial Explanatoins
+Once 
 
 ## Cite
 ```
