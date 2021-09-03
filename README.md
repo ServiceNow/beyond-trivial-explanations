@@ -57,7 +57,7 @@ python trainval.py -e gradient_attacks -sb ./logs/bte -d ./data -r 1
 
 You can plot the results by running the Jupyter notebook in `notebooks/Gather Results.ipynb`
 
-### 3. Visualize the Results
+### 3. Visualize Intermediate Results
 
 Follow these steps to visualize plots. Open `results.ipynb`, run the first cell to get a dashboard like in the gif below, click on the "plots" tab, then click on "Display plots". Parameters of the plots can be adjusted in the dashboard for custom visualizations.
 
