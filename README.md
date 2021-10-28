@@ -27,6 +27,11 @@ python trainval.py -e gradient_attacks -sb ./logs/bte -d ./data -r 1
 
 3. Run `notebooks/Gather Results.ipynb`
 
+<p align="center" width="100%">
+<img width="100%" src="docs/results.png">
+</p>
+
+
 ### 3 (optional). Train from scratch
 To run an experiment you will need to call:
 
