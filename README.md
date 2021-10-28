@@ -27,8 +27,8 @@ python trainval.py -e gradient_attacks -sb ./logs/bte -d ./data -r 1
 
 3. Run `notebooks/Gather Results.ipynb`
 
-<p align="center" width="100%">
-<img width="100%" src="docs/results.png">
+<p align="left" width="100%">
+<img width="30%" src="docs/results.png">
 </p>
 
 
