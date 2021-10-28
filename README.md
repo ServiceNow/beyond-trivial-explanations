@@ -1,5 +1,4 @@
 # Beyond Trivial Counterfactual Explanations with Diverse Valuable Explanations 
-**Pretrained models arriving soon**
 
 ## Accepted at ICCV2021 [[Paper]](https://arxiv.org/abs/2103.10226)
 
@@ -16,7 +15,19 @@
 
 `pip install -r requirements.txt` 
 
-### 2. Reproduce Results
+### 2. Generate counterfactuals for pre-trained models
+You will need to download the pre-trained models from [Zenodo](https://zenodo.org/record/5608669#.YXrzH9bMKDU)
+
+1. Decompress pre-trained models in `$DATA` (e.g. `./data`)
+2. Run the BTE experiment:
+
+```python
+python trainval.py -e gradient_attacks -sb ./logs/bte -d ./data -r 1
+```
+
+3. Run `notebooks/Gather Results.ipynb`
+
+### 3 (optional). Train from scratch
 To run an experiment you will need to call:
 
 ```python
@@ -29,7 +40,7 @@ Where the argument descriptions are:
 -e  [Experiment group to run like 'vae' (the rest of the experiment groups are in exp_configs/main_exps.py)] 
 -sb [Directory where the experiments are saved]
 -r  [Flag for whether to reset the experiments]
--d  [Directory where the datasets are aved]
+-d  [Directory where the datasets are saved]
 ```
 
 To reproduce the results you will need to run:
