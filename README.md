@@ -70,7 +70,7 @@ Finally, run the BTE experiment:
 
 ```python
 python trainval.py -e cache_fim -sb ./logs/bte -d ./data -r 1
-python trainval.py -e gradient_attacks -sb ./logs/bte -d ./data -r 1
+python trainval.py -e random_search -sb ./logs/bte -d ./data -r 1
 ```
 
 You can plot the results by running the Jupyter notebook in `notebooks/Gather Results.ipynb`
