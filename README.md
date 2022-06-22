@@ -1,3 +1,5 @@
+*ServiceNow completed its acquisition of Element AI on January 8, 2021. All references to Element AI in the materials that are part of this project should refer to ServiceNow.*
+
 # Beyond Trivial Counterfactual Explanations with Diverse Valuable Explanations 
 
 ## Accepted at ICCV2021 [[Paper]](https://arxiv.org/abs/2103.10226)
