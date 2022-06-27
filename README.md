@@ -85,8 +85,6 @@ Follow these steps to visualize plots. Open `results.ipynb`, run the first cell 
 <img width="100%" src="https://raw.githubusercontent.com/haven-ai/haven-ai/master/docs/vis.gif">
 </p>
 
-### 4. Beyond Trivial Explanatoins
-Once 
 
 ## Cite
 ```
