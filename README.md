@@ -11,7 +11,8 @@
 ### 0. Download the Dataset
 * [Images](https://drive.google.com/file/d/0B7EVK8r0v71pZjFTYXZWM3FlRnM/view?usp=sharing&resourcekey=0-dYn9z10tMJOBAkviAcfdyQ)
 * [Labels](https://drive.google.com/file/d/0B7EVK8r0v71pblRyaVFSWGxPY0U/view?usp=sharing&resourcekey=0-YW2qIuRcWHy_1C2VaRGL3Q)
-* Uncompress them into a path of your choice. Assuming that `$DATA` corresponds to the path where celebA has been placed, move `./data/celeba_meta` into `$DATA`. 
+* Uncompress them into a path of your choice. Assuming that `$DATA` corresponds to the path where celebA has been placed, move `./data/celeba_meta` into `$DATA`.
+* Note that our oracle is based on the VGG_Faces2 [ResNet-50-128D](https://github.com/ox-vgg/vgg_face2). You need to download it and put it in ./data
 
 ### 1. Install requirements
 
